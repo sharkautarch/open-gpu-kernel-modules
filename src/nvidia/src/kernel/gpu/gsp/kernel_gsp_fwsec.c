@@ -363,7 +363,7 @@ s_vbiosReadStructure
 
 static NvU8 s_vbiosRead8(const KernelGspVbiosImg *pVbiosImg, NvU32 offset, NV_STATUS *pStatus)
 {
-    bios_U008 data;  // ReadStructure expects 'bios' types
+    bios_U008 data = 0;  // ReadStructure expects 'bios' types
     if (NV_UNLIKELY(*pStatus != NV_OK))
     {
         return 0;
@@ -374,7 +374,7 @@ static NvU8 s_vbiosRead8(const KernelGspVbiosImg *pVbiosImg, NvU32 offset, NV_ST
 
 static NvU16 s_vbiosRead16(const KernelGspVbiosImg *pVbiosImg, NvU32 offset, NV_STATUS *pStatus)
 {
-    bios_U016 data;  // ReadStructure expects 'bios' types
+    bios_U016 data = 0;  // ReadStructure expects 'bios' types
     if (NV_UNLIKELY(*pStatus != NV_OK))
     {
         return 0;
@@ -385,7 +385,7 @@ static NvU16 s_vbiosRead16(const KernelGspVbiosImg *pVbiosImg, NvU32 offset, NV_
 
 static NvU32 s_vbiosRead32(const KernelGspVbiosImg *pVbiosImg, NvU32 offset, NV_STATUS *pStatus)
 {
-    bios_U032 data;  // ReadStructure expects 'bios' types
+    bios_U032 data = 0;  // ReadStructure expects 'bios' types
     if (NV_UNLIKELY(*pStatus != NV_OK))
     {
         return 0;

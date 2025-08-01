@@ -953,9 +953,9 @@ __nv_drm_semsurf_ctx_store_callback(
     struct nv_drm_semsurf_fence_callback *newCallback)
 {
     struct nv_drm_device *nv_dev = ctx->base.nv_dev;
-    struct NvKmsKapiSemaphoreSurfaceCallback *oldNvKmsCallback;
+    struct NvKmsKapiSemaphoreSurfaceCallback *oldNvKmsCallback = NULL;
     struct nv_drm_semsurf_fence_callback *oldCallback = NULL;
-    NvU64 oldWaitValue;
+    NvU64 oldWaitValue = 0;
     unsigned long flags;
     bool installed = false;
 

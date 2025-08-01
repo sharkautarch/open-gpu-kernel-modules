@@ -680,7 +680,7 @@ static NV_STATUS nv_acpi_evaluate_dsm_method(
     union acpi_object *dsm = NULL;
     struct acpi_buffer output = { ACPI_ALLOCATE_BUFFER, NULL };
     union acpi_object dsm_params[4];
-    NvU32 data_size;
+    NvU32 data_size = 0;
 
     if (!NV_MAY_SLEEP())
     {
@@ -821,7 +821,7 @@ NV_STATUS NV_API_CALL nv_acpi_ddc_method(
     NvBool bReadMultiBlock
 )
 {
-    acpi_status status;
+    acpi_status status = AE_ERROR;
     union acpi_object *ddc = NULL;
     NvU32 i, largestEdidSize;
     nv_linux_state_t *nvl  = NV_GET_NVL_FROM_NV_STATE(nv);

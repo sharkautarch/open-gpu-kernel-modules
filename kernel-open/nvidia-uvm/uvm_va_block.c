@@ -11434,7 +11434,7 @@ NV_STATUS uvm_va_block_add_mappings(uvm_va_block_t *va_block,
     uvm_va_space_t *va_space = uvm_va_block_get_va_space(va_block);
     NV_STATUS status = NV_OK;
     uvm_page_index_t page_index;
-    uvm_range_group_range_iter_t iter;
+    uvm_range_group_range_iter_t iter = {0};
     uvm_prot_t prot_to_map;
 
     if (UVM_ID_IS_CPU(processor_id) && !uvm_va_block_is_hmm(va_block)) {

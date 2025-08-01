@@ -83,6 +83,7 @@ gpuboostmgrCreateGroup_IMPL
     {
         NV_PRINTF(LEVEL_ERROR,
                   "Invalid Boost Config. Failing Boost Group creation.\n");
+        i = 0;
         NV_ASSERT_OR_GOTO(NV_OK == status, gpuboostmgrCreateGroup_exit);
     }
 
